@@ -1,7 +1,29 @@
 @font-face{
     font-family: "Raleway";
-    src: url("Font/Raleway-Regular.ttf")
+    src: url("Font/Raleway-Medium.ttf")
 }
+
 body{
-    font-family: "Raleway", sans-serif
+    font-family: "Raleway", sans-serif;
+    border: 1px solid red;
+    padding: 1%;
+
+}
+.lienMenu{
+    text-decoration: none;
+    color: #0065FC;
+}
+#logo{
+    flex: 5;
+}
+#menuPrincipal{
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header{
+    display: flex;
+    flex-direction: row;
+
 }
