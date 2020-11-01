@@ -1,24 +1,76 @@
 body{
     font-family: "Raleway", sans-serif;
-    border: 1px solid red;
-    padding: 1%;
-
 }
-.lienMenu{
-    text-decoration: none;
-    color: #0065FC;
+input, button{
+    border: none;
 }
-#logo{
-    flex: 5;
-}
-#menuPrincipal{
-    flex: 2;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+#blocPage{
+    width: 70%;
+    margin: auto;
 }
 header{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 
+}
+#logo{
+    margin-top: 20px;
+}
+header nav a{
+    text-decoration: none;
+    color: #0065FC;
+    margin: 0;
+    padding-top: 20px;
+}
+header nav a:hover{
+    border-top: 2px solid #0065FC;
+}
+#titre{
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    padding: 0;
+    margin: 20px 0 0 0;
+    font-size: 1.2em;
+}
+h1 + p{
+    font-size: 0.8em;
+    padding: 0;
+    margin: 5px;
+
+}
+#menuPrincipal{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#recherche{
+    margin-top: 20px;
+    height: 40px;
+    display: flex;
+
+}
+#recherche input{
+    font-weight: bold;
+    border-top: 1px solid #F2F2F2;
+    border-bottom: 1px solid #F2F2F2;
+    padding: 10px 0 10px 10px;
+}
+#recherche label{
+    border-top: 1px solid #F2F2F2;
+    border-bottom: 1px solid #F2F2F2;
+    border-left: 1px solid #F2F2F2;
+    padding: 12px 15px 10px 15px;
+    border-radius: 10px 0 0 10px;
+    background-color: #F2F2F2;
+    font-size: 0.8em;
+}
+#recherche button{
+    color: white;
+    padding: 0 15px;
+    border-radius: 0 10px 10px 0;
+    background-color: #0065FC;
 }
