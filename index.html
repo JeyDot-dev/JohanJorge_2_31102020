@@ -31,17 +31,16 @@
 
             <div id="recherche">
                 <label for="rechercherVille"><i class="fas fa-map-marker-alt"></i></label>
-                <input type="search" name="rechercherVille" id="rechercherVille" placeholder="Indiquez la Ville" aria-label="Rechercher logements dans une ville" />
+                <input type="search" name="rechercherVille" id="rechercherVille" placeholder="Indiquez la Ville"  />
                 <button>Rechercher</button>
             </div>
 
             <div id="filtres">
                 <h2>Filtres</h2>
-                <input class="switch" type="checkbox" />
-                <button>Economique</button>
-                <button>Familial</button>
-                <button>Romantique</button>
-                <button>Animaux autorisés</button>
+                    <label><input type="checkbox" name="filtreEconomique" class="switch" id="switchEconomique" /><i class="fas fa-money-bill-wave"></i>Économique</label>
+                    <label><input type="checkbox" name="filtreFamilial" class="switch" id="switchFamilial" /><i class="fas fa-child"></i>Familial</label>
+                    <label><input type="checkbox" name="filtreRomantique" class="switch" id="switchRomantique" /><i class="fas fa-heart"></i>Romantique</label>
+                    <label><input type="checkbox" name="filtreAnimauxAutorises" class="switch" id="switchAnimauxAutorises" /><i class="fas fa-dog"></i>Animaux autorisés</label>
             </div>
 
             <div id="nombresResultats">
