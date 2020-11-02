@@ -105,7 +105,7 @@ input, button{
 #recherche button:active{
     color:#DEEBFF;
 }
-/* Sliders filtres */
+/* filtres */
 input[type="checkbox"]{
     cursor: pointer;
     appearance: none;
@@ -127,6 +127,9 @@ input[type="checkbox"]:checked{
 input[type="checkbox"]:hover{
     background-color:#DEEBFF
 }
+input[type="checkbox"]:active{
+    transform: scale(1.2);
+}
 input[type="checkbox"]:focus{
     outline: none;
 }
@@ -147,6 +150,7 @@ input[type="checkbox"]:focus{
 #filtres i {
     color:#0065FC;
     position: absolute;
+    pointer-events: none
 }
 .fa-money-bill-wave{
     position: absolute;
