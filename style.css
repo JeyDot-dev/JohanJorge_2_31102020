@@ -1,11 +1,8 @@
 body{
     font-family: "Raleway", sans-serif;
 }
-input, button{
-    border: none;
-}
 #blocPage{
-    width: 70%;
+    width: 60%;
     margin: auto;
 }
 header{
@@ -17,60 +14,107 @@ header{
 #logo{
     margin-top: 20px;
 }
+/* menu de navigation */
+#menuPrincipal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 header nav a{
     text-decoration: none;
     color: #0065FC;
     margin: 0;
+    margin-left: 20px;
     padding-top: 20px;
 }
 header nav a:hover{
     border-top: 2px solid #0065FC;
 }
+/* Slogan */
 #titre{
     display: flex;
     flex-direction: column;
 }
 h1{
     padding: 0;
-    margin: 20px 0 0 0;
+    margin: 2em 0 0 0;
     font-size: 1.2em;
 }
 h1 + p{
     font-size: 0.8em;
+    margin: 0;
     padding: 0;
-    margin: 5px;
+    margin-top: 0.8em;
 
 }
-#menuPrincipal{
-    width: 30%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Champ de recherche et bouton */
+input, button{
+    border: none;
 }
+
 #recherche{
-    margin-top: 20px;
-    height: 40px;
+    margin-top: 1.2em;
+    height: 2.4em;
+    width: 23em;
     display: flex;
-
 }
 #recherche input{
     font-weight: bold;
     border-top: 1px solid #F2F2F2;
     border-bottom: 1px solid #F2F2F2;
-    padding: 10px 0 10px 10px;
+    flex: 17;
+    padding-left: 1.2em;
+}
+#recherche input:focus{
+    outline: none;
+    border-top: 2px solid #DEEBFF;
+    border-bottom: 2px solid #DEEBFF;
+}
+#recherche input:focus::before{
+    background-color: #DEEBFF;
 }
 #recherche label{
+    cursor: pointer;
     border-top: 1px solid #F2F2F2;
     border-bottom: 1px solid #F2F2F2;
     border-left: 1px solid #F2F2F2;
-    padding: 12px 15px 10px 15px;
     border-radius: 10px 0 0 10px;
     background-color: #F2F2F2;
     font-size: 0.8em;
+    flex: 3;
+    display: flex;
+}
+.fa-map-marker-alt{
+    margin: auto;
 }
 #recherche button{
+    cursor: pointer;
     color: white;
-    padding: 0 15px;
     border-radius: 0 10px 10px 0;
     background-color: #0065FC;
+    flex: 8;
+}
+#recherche button:focus{
+    outline: none;
+}
+#recherche button:active{
+    color:#DEEBFF;
+}
+/* Sliders filtres */
+.switch{
+    appearance: none;
+    height: 30px;
+    width: 8em;
+    border: 2px solid #F2F2F2;
+
+}
+.switch:checked{
+    
+    
+}
+.switch{
+    
+}
+.switch{
+    
 }
