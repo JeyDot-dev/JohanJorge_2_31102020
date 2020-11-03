@@ -13,7 +13,7 @@ h2{
     font-size: 0.8em;
 }
 #blocPage{
-    width: 50%;
+    width: 1024px;
     margin: auto;
 }
 header{
@@ -118,7 +118,8 @@ input[type="checkbox"]{
     width: 2.4em;
     border-radius: 2.4em;
     transform: scale(1.1);
-    background-color: #F2F2F2;
+    background-color: #fff;
+    box-shadow: 0 0 3px #DEEBFF inset;
     transition: background-color 0.2s ease-in-out;
 }
 input[type="checkbox"]:checked{
@@ -178,19 +179,31 @@ input[type="checkbox"]:focus{
 #filtres h2{
     margin-right: 1em;
 }
+/* section 1*/
+section[id="1"]{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+
+}
 /* section hebergements */
 section h1{
     padding: 0;
     margin: 0;
+
+}
+section div[id="hebergements"] h1{
     margin-top: 1.8em;
     width: 92%;
 }
-section a, h2, p{
+
+section a, section h2, section p{
     margin: 0;
     color: black;
     text-decoration: none;
 }
-section a h2, p{
+section div[id="hebergements"] a h2, section div[id="hebergements"] a p{
     margin-left: 8px;
     margin-top: 3px;
 }
@@ -198,7 +211,7 @@ section p{
     font-size: 0.65em;
 }
 section div[id="hebergements"]{
-    width: 40em;
+    width: 42em;
     height: 28em;
     display: flex;
     margin: 2em 0;
@@ -208,7 +221,6 @@ section div[id="hebergements"]{
     border-radius: 1em; 
 }
 section div[id="hebergements"] div{
-    color: black;
     margin: 0;
     padding: 4px;
     background-color: white;
@@ -222,8 +234,8 @@ section div[id="hebergements"] div:hover{
     transition: ease-in-out 0.09s;
     transform: scale(1.08);
 }
-/*images section hebergmenets*/
-section div[id=hebergements] div img{
+/*images section hebergements*/
+section div[id="hebergements"] div img{
     margin: auto;
     object-fit: cover;
     object-position: 7%;
@@ -231,9 +243,81 @@ section div[id=hebergements] div img{
     height: 56%;
     border-radius: 10px 10px 0 0;
 }
+/* plus d'infos */
+.fa-info{
+    position: relative;
+    display: inline-block;
+    color: #0065FC;
+    border-radius: 1em;
+    text-align: center;
+    padding:5px 9px ;
+    border: 2px #F2F2F2 solid;
+    position: relative;
+    display: inline-block;
+}
+span[id="tooltip"]{
+    opacity: 0;
+    width: 120px;
+    background-color: #DEEBFF;
+    color: #0065FC;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    left: 25px;
+    top: 25px;
+}
+.fa-info:hover #tooltip{
+    transition: ease-in-out 0.2s;
+    opacity: 1;
+  }
 #plus{
     font-size: 0.8em;
     font-weight: bold;
     width: 100%;
     padding: 1.5% 0 2% 2.3em;
+}
+/* section "les plus populaires" */
+section div[id="populaires"] a h2, section div[id="populaires"] a p{
+    width: 40%;
+    margin: 0.4em 0;
+    padding-left: 107px;
+}
+section div[id="populaires"] h1{
+    margin-left: 1.8em;
+    padding-top: 0.15em;
+    height: 0;
+    margin-bottom: 1em;
+}
+section div[id="populaires"]{
+    width: 20em;
+    height: 28em;
+    display: flex;
+    flex-direction: column;
+    margin: 2em 0;
+    justify-content: space-evenly;
+    background-color: #F2F2F2;
+    border-radius: 1em; 
+}
+section div[id="populaires"] div{
+    margin: 0 1.8em;
+    padding: 4px;
+    background-color: white;
+    height: 20.6%;
+    width: 82%;
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgb(206, 206, 206)
+}
+section div[id="populaires"] div:hover{
+    transition: ease-in-out 0.09s;
+    transform: scale(1.08);
+}
+/*images section "les plus populaires"*/
+section div[id="populaires"] div img{
+    object-fit: cover;
+    object-position: 60%;
+    width: 35%;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+    float: left;
 }
