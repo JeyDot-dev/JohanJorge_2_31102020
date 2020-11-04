@@ -396,6 +396,50 @@ div[id="s2Cell4"] img{
     transition: ease-in-out 0.09s;
     transform: scale(1.08);
 }
+/* Ajustement photo cellule 4 */
 div[class="s2CellLong"] img[src="images/activites/parcNationalDesCalanques.jpg"]{
     filter: brightness(1.2);
+}
+/* footer */
+h3{
+    text-align: left;
+    font-size: 0.8em;
+    margin-top: 2.5em;
+}
+footer ul{
+    padding: 0;
+    margin: 0;
+}
+footer li{
+    list-style-type: none;
+    width: 100%;
+}
+footer a{
+    color: black;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+footer{
+    margin-top: 4em;
+    width: 100%;
+    height: 200px;
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: center;
+
+}
+footer div[id="placementFooter"]{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 1024px;
+    height: 100%;
+}
+footer div div{
+    height: 100%;
+    width: 13em;
+}
+div[id="placementFooter"] li:hover{
+    text-decoration: underline;
 }
