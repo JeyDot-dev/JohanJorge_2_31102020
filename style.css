@@ -1,29 +1,73 @@
 body{
     font-family: "Raleway", sans-serif;
+    max-width: 768px;
+    min-width: 480px;
+}
+p{
+    font-size: 1.3em;
+}
+h1{
+    font-size: 2em;
+}
+h2{
+
+}
+h3{
+
+}
+ul{
+    padding: 0;
+    margin: 1.2em 0 0 0;
+}
+li{
+    list-style-type: none;
 }
 /* Header */
 header{
+    width: 94%;
+    margin: auto;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
 }
-/* >Logo */
-/* >Header Nav */
-#menuPrincipal{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 header nav a{
+    font-size: 1.1em;
     text-decoration: none;
     color: #0065FC;
-    margin: 0;
-    margin-left: 20px;
-    padding-top: 20px;
 }
-header nav a:hover{
-    border-top: 2px solid #0065FC;
+/* >Logo */
+#logo{
+    margin-left: 2%;
+    transform: scale(1.2);
 }
+/* >>S'inscrire */
+#sInscrire{
+    position: absolute;
+    right: 5%;
+    top: -30px;
+    text-align: right;
+}
+/* >Header Nav */
+header nav{
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+/* >>Hébergements Activités */
+header nav ul{
+    width: 100vw;
+    display: flex;
+}
+header nav li{
+    width: 50%;
+    text-align: center;
+}
+
 /* Nav recherche */
+nav[id ="blocRecherche"]{
+    margin: auto;
+    width: 94%;
+}
 /* >Champ de recherche et bouton */
 input, button{
     border: none;
@@ -31,16 +75,16 @@ input, button{
 /* >Barre de recherche */
 #recherche{
     margin-top: 1.2em;
-    height: 2.4em;
-    width: 20%;
+    height: 75px;
+    width: 100%;
     display: flex;
 }
 /* >>Champ de saisie */
 #recherche input{
+    flex: 1;
     font-weight: bold;
     border-top: 1px solid #F2F2F2;
     border-bottom: 1px solid #F2F2F2;
-    flex: 17;
     padding-left: 1.2em;
 }
 #recherche input:focus{
@@ -48,28 +92,33 @@ input, button{
     border-top: 2px solid #DEEBFF;
     border-bottom: 2px solid #DEEBFF;
 }
+#recherche input[placeholder="Indiquez la Ville"]{
+    font-size: 1.3em;
+}
 /* >>Icône recherche */
 #recherche label{
+    min-width: 75px;
     cursor: pointer;
     border-top: 1px solid #F2F2F2;
     border-bottom: 1px solid #F2F2F2;
     border-left: 1px solid #F2F2F2;
-    border-radius: 10px 0 0 10px;
+    border-radius: 23px 0 0 23px;
     background-color: #F2F2F2;
-    font-size: 0.8em;
-    flex: 3;
     display: flex;
 }
 .fa-map-marker-alt{
     margin: auto;
 }
 /* >>Boutton recherche */
+#recherche span{
+    display: none;
+}
 #recherche button{
+    min-width: 75px;
     cursor: pointer;
     color: white;
-    border-radius: 0 10px 10px 0;
+    border-radius: 23px;
     background-color: #0065FC;
-    flex: 8;
 }
 #recherche button:focus{
     outline: none;
@@ -77,30 +126,45 @@ input, button{
 #recherche button:active{
     color:#DEEBFF;
 }
+#recherche i{
+    font-size: 20px;
+}
 /* filtres */
 #filtres {
-    width: 80%;
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     margin: 1.3em 0;
-    align-content: space-between;
-    align-items: center;
 }
 #filtres h2{
-    margin-right: 1em;
+    width: 100%;
 }
 /* >filtres individuels */
+#filtres label{
+    cursor: pointer;
+    font-size: 1.4em;
+    font-weight: bold;
+    height: 2.4em;
+    border: 0.15em solid #F2F2F2;
+    border-radius: 2.4em;
+    display: flex;
+    position: relative;
+    padding-left: 3em;
+    padding-right: 1em;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+}
 input[type="checkbox"]{
     cursor: pointer;
     appearance: none;
     padding: 0;
     margin: 0;
     position: absolute;
-    left: 0;
-    content: "";
-    height: 2.4em;
-    width: 2.4em;
+    left: -2px;
+    height: 57px;
+    width: 57px;
     border-radius: 2.4em;
-    transform: scale(1.1);
     background-color: #fff;
     box-shadow: 0 0 3px #DEEBFF inset;
     transition: background-color 0.2s ease-in-out;
@@ -110,46 +174,38 @@ input[type="checkbox"]:checked{
 }
 
 input[type="checkbox"]:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 input[type="checkbox"]:active{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 input[type="checkbox"]:focus{
     outline: none;
 }
-#filtres label{
-    cursor: pointer;
-    font-size: 0.8em;
-    font-weight: bold;
-    height: 2.4em;
-    border: 0.15em solid #F2F2F2;
-    border-radius: 2.4em;
-    display: flex;
-    position: relative;
-    padding-left: 3em;
-    padding-right: 1em;
-    margin-left: 2em;
-    align-items: center;
-}
 /* >Icones filtres */
 #filtres i {
+    font-size: 1.06em;
     color:#0065FC;
     position: absolute;
     pointer-events: none
 }
 .fa-money-bill-wave{
     position: absolute;
-    left: 0.6em;
+    left: 0.45em;
+    scale: 0.7 1;
 }
 .fa-child{
-    left: 0.88em;
+    left: 0.75em;
+    scale: 0.9 1;
 }
 .fa-heart{
-    left: 0.74em;
+    top: 0.7em;
+    left: 0.6em;
+    scale: 0.9 1;
 }
 .fa-dog{
-    left: 0.7em;
+    left: 0.56em;
+    scale: 0.9 1;
 }
 /* Icône info */
 .fa-info{
@@ -246,6 +302,8 @@ section[id="populaires"] div img{
 }
 /* article 2 */
 article[id="article2"]{
+    width: 94%;
+    margin: auto;
 
 }
 /* >Section activités */
@@ -269,21 +327,15 @@ div[class="cellLong"]{
     height: 100%;
 }
 div[id="cell1"]{
-    margin-left: 2.6em;
-    margin-right: 2.6em;
     height: 50%;
 }
 div[id="cell2"]{
-    margin-left: 2.6em;
-    margin-right: 2.6em;
     height: 35%;
 }
 div[id="cell3"]{
-    margin-left: 2.6em;
     height: 40%;
 }
 div[id="cell4"]{
-    margin-left: 2.6em;
     height: 45%;
 }
 /* >>>>Text cellules */
@@ -338,17 +390,11 @@ footer nav{
     height: 100%;
 }
 /* >>Footer nav sections */
-h3{
-    text-align: left;
-    font-size: 0.8em;
-    margin-top: 2.5em;
-}
 footer ul{
     padding: 0;
     margin: 0;
 }
 footer li{
-    list-style-type: none;
     width: 100%;
 }
 footer a{
