@@ -12,10 +12,7 @@ h1{
 h2{
     font-size: 0.8em;
 }
-#blocPage{
-    width: 1024px;
-    margin: auto;
-}
+
 header{
     display: flex;
     flex-direction: row;
@@ -442,10 +439,4 @@ footer div div{
 }
 div[id="placementFooter"] li:hover{
     text-decoration: underline;
-}
-@media only screen and (min-width: 1200px){
-    *{
-        background-color: rgba(120, 32, 42, 0.2);
-    }
-    
 }
