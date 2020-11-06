@@ -1,20 +1,18 @@
 
-*{
-    background-color: rgba(0, 50, 155, 0.1)
-}
 body{
     font-family: "Raleway", sans-serif;
-    width: 100%;
+    min-width: 320px;
     max-width: 700px;
+    overflow-x: hidden;
 }
 p{
     font-size: 1.3em;
 }
 h1{
-    font-size: 2em;
+    font-size: 1.5em;
 }
 h2{
-
+    font-size: 1.3em;
 }
 h3{
 
@@ -278,10 +276,6 @@ section[id="hebergements"] div{
     height: 275px;
     background-color: white;
 }
-section[id="hebergements"] div:hover{
-    transition: ease-in-out 0.09s;
-    transform: scale(1.08);
-}
 /* >>>images section hebergements*/
 section[id="hebergements"] img{
     margin: auto;
@@ -297,7 +291,7 @@ section[id="populaires"]{
     order: 1;
     padding-bottom: 50px;
     width: 100%;
-    height: 700px;
+    height: 760px;
     display: flex;
     flex-direction: column;
     background-color: #F2F2F2;
@@ -307,24 +301,25 @@ section[id="populaires"] h1{
     margin:50px 0 25px 3%;
 }
 /* >>Cellules section "les plus populaires */
+section[id="populaires"] div h2, section[id="populaires"] div p{
+    width: 42%;
+    margin-left: 53%;
+    margin-right: 20%;
+}
 section[id="populaires"] div{
     padding: 6px 0 6px 6px;
     margin: 10px auto;
     background-color: white;
-    height: 170px;
+    height: 190px;
     width: calc(94% - 6px);
     border-radius: 12px;
     box-shadow: 0 0 8px rgb(206, 206, 206);
-}
-section[id="populaires"] div:hover{
-    transition: ease-in-out 0.09s;
-    transform: scale(1.08);
 }
 /* >>>Images section "les plus populaires"*/
 section[id="populaires"] div img{
     object-fit: cover;
     object-position: 60%;
-    width: 35%;
+    width: 48%;
     height: 100%;
     border-radius: 10px 0 0 10px;
     float: left;
@@ -341,7 +336,6 @@ section[id="activites"]{
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: stretch;
 }
 /* >>Cellules section activités */
@@ -399,10 +393,6 @@ section[id="activites"] img{
 }
 
 /* >>>>>Animation cellules section 2 */
-#activites div[id="s2CellLayout"] div:hover{
-    transition: ease-in-out 0.09s;
-    transform: scale(1.08);
-}
 /* Ajustement photo cellule 4 */
 img[src="images/activites/parcNationalDesCalanques.jpg"]{
     filter: brightness(1.2);
