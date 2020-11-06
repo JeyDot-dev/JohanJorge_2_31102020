@@ -1,16 +1,18 @@
 
 body{
     font-family: "Raleway", sans-serif;
-    max-width: 700px;
+    max-width: 767px;
     overflow-x: hidden;
 }
 p{
     font-size: 1.3em;
 }
 h1{
+    font-weight: 700;
     font-size: 1.5em;
 }
 h2{
+    font-weight: 700;
     font-size: 1.3em;
 }
 h3{
@@ -26,6 +28,9 @@ li{
 a{
     text-decoration: none;
     color: black;
+}
+strong{
+    font-weight: 600;
 }
 /* Header */
 header{
@@ -244,12 +249,6 @@ span[id="tooltip"]{
 .fa-info:hover #tooltip{
     transition: ease-in-out 0.2s;
 }
-#plus{
-    font-size: 0.8em;
-    font-weight: bold;
-    margin-right: 42.5em;
-    padding: 1.5% 0 2% 0;
-}
 /* article 1 */
 article[id="article1"]{
     width: 100%;
@@ -265,15 +264,22 @@ article[id="article1"]{
     height: auto;
 }
 #hebergements h1{
-    margin-top: 50px;
+    margin: 50px 0 30px 3%;
 }
 /* >>Cellules section hebergments */
+
 section[id="hebergements"] div{
     width:  calc(94% - 6px);
     padding: 6px;
-    margin: 10px auto;
+    margin: 22px auto;
     height: 275px;
     background-color: white;
+    border-radius: 30px;
+    box-shadow: silver 2px 2px 10px;
+}
+/* >>>text cellules */
+section[id="hebergements"] div h2, section[id="hebergements"] div p{
+    margin: 5px 0 0 1%;    
 }
 /* >>>images section hebergements*/
 section[id="hebergements"] img{
@@ -281,10 +287,15 @@ section[id="hebergements"] img{
     object-fit: cover;
     object-position: 7%;
     width: 100%;
-    height: 56%;
-    border-radius: 10px 10px 0 0;
+    height: 65%;
+    border-radius: 26px 26px 0 0;
 }
-/* >>>Text cellules hebergements*/
+/* >>> Afficher plus */
+#plus{
+    font-weight: bolder;
+    margin-left: 3%;
+    font-size: 1.3em;
+}
 /* >section "les plus populaires" */
 section[id="populaires"]{
     order: 1;
@@ -340,12 +351,15 @@ section[id="activites"]{
 /* >>Cellules section activités */
 section[id="activites"] div{
     margin: 15px 0;
-    border-radius: 12px;
+    border-radius: 25px;
     width: 100%;
     height: 265px;
     box-shadow: 1px 2px 8px rgb(206, 206, 206);
 }
-
+/* >>text cellulle */
+section[id="activites"] h2{
+    margin: 20px;
+}
 /* >>>Cellules individuelles section activités
 
 div[class="cellLong"]{
@@ -384,11 +398,11 @@ div[id="cell4"] img{
 /* >>>>Images cellules section activités */
 section[id="activites"] img{
     margin: auto;
-    height: 70%;
+    height: 75%;
     width: 100%;
     object-fit: cover;
     object-position: 60%;
-    border-radius: 10px 10px 0 0;
+    border-radius: 25px 25px 0 0;
 }
 
 /* >>>>>Animation cellules section 2 */
