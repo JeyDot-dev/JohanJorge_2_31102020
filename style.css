@@ -1,7 +1,11 @@
+
+*{
+    background-color: rgba(0, 50, 155, 0.1)
+}
 body{
     font-family: "Raleway", sans-serif;
-    max-width: 768px;
-    min-width: 480px;
+    width: 100%;
+    max-width: 700px;
 }
 p{
     font-size: 1.3em;
@@ -22,10 +26,13 @@ ul{
 li{
     list-style-type: none;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
 /* Header */
 header{
-    width: 94%;
-    margin: auto;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -37,7 +44,7 @@ header nav a{
 }
 /* >Logo */
 #logo{
-    margin-left: 2%;
+    margin-left: 4%;
     transform: scale(1.2);
 }
 /* >>S'inscrire */
@@ -55,7 +62,7 @@ header nav{
 }
 /* >>Hébergements Activités */
 header nav ul{
-    width: 100vw;
+    width: 100%;
     display: flex;
 }
 header nav li{
@@ -65,7 +72,10 @@ header nav li{
 
 /* Nav recherche */
 nav[id ="blocRecherche"]{
-    margin: auto;
+    width: 100%;
+}
+nav[id ="blocRecherche"] h1, p{
+    margin: 0 auto;
     width: 94%;
 }
 /* >Champ de recherche et bouton */
@@ -75,17 +85,16 @@ input, button{
 /* >Barre de recherche */
 #recherche{
     margin-top: 1.2em;
-    height: 75px;
-    width: 100%;
+    height: 65px;
+    width: 94%;
+    margin: auto;
     display: flex;
 }
 /* >>Champ de saisie */
 #recherche input{
-    flex: 1;
     font-weight: bold;
     border-top: 1px solid #F2F2F2;
     border-bottom: 1px solid #F2F2F2;
-    padding-left: 1.2em;
 }
 #recherche input:focus{
     outline: none;
@@ -93,28 +102,32 @@ input, button{
     border-bottom: 2px solid #DEEBFF;
 }
 #recherche input[placeholder="Indiquez la Ville"]{
-    font-size: 1.3em;
+    width: calc(100% - 130px);
+    padding-left: 1.2em;
+    font-size: 1.2em;
 }
 /* >>Icône recherche */
 #recherche label{
-    min-width: 75px;
+    width: 65px;
     cursor: pointer;
     border-top: 1px solid #F2F2F2;
     border-bottom: 1px solid #F2F2F2;
     border-left: 1px solid #F2F2F2;
     border-radius: 23px 0 0 23px;
     background-color: #F2F2F2;
-    display: flex;
+    position: relative;
 }
 .fa-map-marker-alt{
-    margin: auto;
+    position: absolute;
+    left: 40%;
+    top: 30%;
 }
 /* >>Boutton recherche */
 #recherche span{
     display: none;
 }
 #recherche button{
-    min-width: 75px;
+    width: 65px;
     cursor: pointer;
     color: white;
     border-radius: 23px;
@@ -130,11 +143,11 @@ input, button{
     font-size: 20px;
 }
 /* filtres */
-#filtres {
-    width: 100%;
+#filtres{
+    margin: auto;
+    width: 94%;
     display: flex;
     flex-wrap: wrap;
-    margin: 1.3em 0;
 }
 #filtres h2{
     width: 100%;
@@ -233,8 +246,7 @@ span[id="tooltip"]{
 }
 .fa-info:hover #tooltip{
     transition: ease-in-out 0.2s;
-    opacity: 1;
-  }
+}
 #plus{
     font-size: 0.8em;
     font-weight: bold;
@@ -242,16 +254,29 @@ span[id="tooltip"]{
     padding: 1.5% 0 2% 0;
 }
 /* article 1 */
-article[id="1"]{
+article[id="article1"]{
     width: 100%;
-    height: 500px;
+    height: auto;
     display: flex;
-    justify-content: space-between;
-
+    flex-direction: column;
 }
 /* >section hebergements */
+#hebergements{
+    order: 2;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+}
+#hebergements h1{
+    margin-top: 50px;
+}
 /* >>Cellules section hebergments */
 section[id="hebergements"] div{
+    width:  calc(94% - 6px);
+    padding: 6px;
+    margin: 10px auto;
+    height: 275px;
+    background-color: white;
 }
 section[id="hebergements"] div:hover{
     transition: ease-in-out 0.09s;
@@ -266,24 +291,28 @@ section[id="hebergements"] img{
     height: 56%;
     border-radius: 10px 10px 0 0;
 }
+/* >>>Text cellules hebergements*/
 /* >section "les plus populaires" */
 section[id="populaires"]{
-    width: 20em;
-    height: 28em;
+    order: 1;
+    padding-bottom: 50px;
+    width: 100%;
+    height: 700px;
     display: flex;
     flex-direction: column;
-    margin: 2em 0;
-    justify-content: space-evenly;
     background-color: #F2F2F2;
     border-radius: 1em; 
 }
+section[id="populaires"] h1{
+    margin:50px 0 25px 3%;
+}
 /* >>Cellules section "les plus populaires */
 section[id="populaires"] div{
-    margin: 0 1.8em;
-    padding: 4px;
+    padding: 6px 0 6px 6px;
+    margin: 10px auto;
     background-color: white;
-    height: 20.6%;
-    width: 82%;
+    height: 170px;
+    width: calc(94% - 6px);
     border-radius: 12px;
     box-shadow: 0 0 8px rgb(206, 206, 206);
 }
@@ -302,27 +331,30 @@ section[id="populaires"] div img{
 }
 /* article 2 */
 article[id="article2"]{
-    width: 94%;
-    margin: auto;
-
+    width: 100%;
 }
 /* >Section activités */
 section[id="activites"]{
+    width: 94%;
+    margin: 0 auto;
     margin-top: 1.3em;
-    height: 330px;
+    height: auto;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: stretch;
 }
 /* >>Cellules section activités */
 section[id="activites"] div{
+    margin: 15px 0;
     border-radius: 12px;
-    width: 22%;
+    width: 100%;
+    height: 265px;
     box-shadow: 1px 2px 8px rgb(206, 206, 206);
 }
-/* >>>Cellules individuelles section activités */
+
+/* >>>Cellules individuelles section activités
+
 div[class="cellLong"]{
     height: 100%;
 }
@@ -338,18 +370,7 @@ div[id="cell3"]{
 div[id="cell4"]{
     height: 45%;
 }
-/* >>>>Text cellules */
-/* >>>>Images cellules section activités */
-section[id="activites"] img{
-    margin: auto;
-    width: 100%;
-    object-fit: cover;
-    object-position: 60%;
-    border-radius: 10px 10px 0 0;
-}
-section[id="activites"] img{
-    height: 18em;
-}
+
 div[id="cell1"] img{
     height: 7.7em;
 
@@ -363,6 +384,20 @@ div[id="cell3"] img{
 div[id="cell4"] img{
     height: 6.7em;
 }
+
+*/
+
+/* >>>>Text cellules */
+/* >>>>Images cellules section activités */
+section[id="activites"] img{
+    margin: auto;
+    height: 70%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 60%;
+    border-radius: 10px 10px 0 0;
+}
+
 /* >>>>>Animation cellules section 2 */
 #activites div[id="s2CellLayout"] div:hover{
     transition: ease-in-out 0.09s;
@@ -374,20 +409,20 @@ img[src="images/activites/parcNationalDesCalanques.jpg"]{
 }
 /* Footer */
 footer{
-    margin-top: 4em;
+    margin-top: 20px;
     width: 100%;
-    height: 200px;
+    height: 500px;
     background-color: #F2F2F2;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 
 }
 footer nav{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 1024px;
-    height: 100%;
+    width: 92%;
+    margin: 4%;
 }
 /* >>Footer nav sections */
 footer ul{
