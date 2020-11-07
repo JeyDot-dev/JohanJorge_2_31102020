@@ -1,4 +1,7 @@
 
+html {
+	scroll-behavior: smooth;
+}
 body{
     font-family: "Raleway", sans-serif;
     max-width: 767px;
