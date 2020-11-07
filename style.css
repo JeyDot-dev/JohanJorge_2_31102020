@@ -9,7 +9,7 @@ p{
 }
 h1{
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 1.6em;
 }
 h2{
     font-weight: 700;
@@ -53,11 +53,12 @@ header nav a{
 #sInscrire{
     position: absolute;
     right: 5%;
-    top: -30px;
+    top: -60px;
     text-align: right;
 }
 /* >Header Nav */
 header nav{
+    margin: 20px 0 35px 0;
     width: 100%;
     display: flex;
     position: relative;
@@ -68,10 +69,13 @@ header nav ul{
     display: flex;
 }
 header nav li{
+    border-bottom: lavender 3px solid;
+    padding-bottom: 15px;
+    font-size: 1.2em;
+    font-weight: 600;
     width: 50%;
     text-align: center;
 }
-
 /* Nav recherche */
 nav[id ="blocRecherche"]{
     width: 100%;
@@ -80,16 +84,21 @@ nav[id ="blocRecherche"] h1, p{
     margin: 0 auto;
     width: 94%;
 }
+nav[id ="blocRecherche"] h1{
+    margin-bottom: 10px;
+}
+nav[id ="blocRecherche"] p{
+    margin-bottom: 35px;
+}
 /* >Champ de recherche et bouton */
 input, button{
     border: none;
 }
 /* >Barre de recherche */
 #recherche{
-    margin-top: 1.2em;
     height: 65px;
     width: 94%;
-    margin: auto;
+    margin: 0 auto;
     display: flex;
 }
 /* >>Champ de saisie */
@@ -115,14 +124,14 @@ input, button{
     border-top: 1px solid #F2F2F2;
     border-bottom: 1px solid #F2F2F2;
     border-left: 1px solid #F2F2F2;
-    border-radius: 23px 0 0 23px;
+    border-radius: 20px 0 0 20px;
     background-color: #F2F2F2;
     position: relative;
 }
 .fa-map-marker-alt{
     position: absolute;
     left: 40%;
-    top: 30%;
+    top: 35%;
 }
 /* >>Boutton recherche */
 #recherche span{
@@ -132,7 +141,7 @@ input, button{
     width: 65px;
     cursor: pointer;
     color: white;
-    border-radius: 23px;
+    border-radius: 20px;
     background-color: #0065FC;
 }
 #recherche button:focus{
@@ -146,12 +155,13 @@ input, button{
 }
 /* filtres */
 #filtres{
-    margin: auto;
+    margin: 0px auto 20px auto;
     width: 94%;
     display: flex;
     flex-wrap: wrap;
 }
 #filtres h2{
+    margin: 35px auto 20px auto;
     width: 100%;
 }
 /* >filtres individuels */
@@ -224,15 +234,16 @@ input[type="checkbox"]:focus{
 }
 /* Icône info */
 .fa-info{
+    float: left;
+    font-size: 0.8em;
     position: relative;
-    display: inline-block;
+    margin-right: 10px;
     color: #0065FC;
     border-radius: 1em;
     text-align: center;
-    padding:5px 9px ;
+    padding:5px 10px ;
     border: 2px #F2F2F2 solid;
     position: relative;
-    display: inline-block;
 }
 span[id="tooltip"]{
     opacity: 0;
@@ -260,7 +271,7 @@ article[id="article1"]{
 #hebergements{
     order: 2;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 40px auto;
     height: auto;
 }
 #hebergements h1{
@@ -271,7 +282,7 @@ article[id="article1"]{
 section[id="hebergements"] div{
     width:  calc(94% - 6px);
     padding: 6px;
-    margin: 22px auto;
+    margin: 20px auto;
     height: 275px;
     background-color: white;
     border-radius: 30px;
@@ -292,8 +303,9 @@ section[id="hebergements"] img{
 }
 /* >>> Afficher plus */
 #plus{
+    display: inline-block;
     font-weight: bolder;
-    margin-left: 3%;
+    margin: 20px 0 0 3%;
     font-size: 1.3em;
 }
 /* >section "les plus populaires" */
@@ -301,9 +313,7 @@ section[id="populaires"]{
     order: 1;
     padding-bottom: 50px;
     width: 100%;
-    height: 760px;
-    display: flex;
-    flex-direction: column;
+    height: auto;
     background-color: #F2F2F2;
     border-radius: 1em; 
 }
@@ -318,7 +328,7 @@ section[id="populaires"] div h2, section[id="populaires"] div p{
 }
 section[id="populaires"] div{
     padding: 6px 0 6px 6px;
-    margin: 10px auto;
+    margin: 12px auto;
     background-color: white;
     height: 190px;
     width: calc(94% - 6px);
@@ -337,6 +347,7 @@ section[id="populaires"] div img{
 /* article 2 */
 article[id="article2"]{
     width: 100%;
+    margin-bottom: 65px;
 }
 /* >Section activités */
 section[id="activites"]{
@@ -344,19 +355,15 @@ section[id="activites"]{
     margin: 0 auto;
     margin-top: 1.3em;
     height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
 }
 /* >>Cellules section activités */
 section[id="activites"] div{
-    margin: 15px 0;
+    margin: 35px 0;
     border-radius: 25px;
     width: 100%;
     height: 265px;
     box-shadow: 1px 2px 8px rgb(206, 206, 206);
 }
-/* >>text cellulle */
 section[id="activites"] h2{
     margin: 20px;
 }
@@ -414,7 +421,7 @@ img[src="images/activites/parcNationalDesCalanques.jpg"]{
 footer{
     margin-top: 20px;
     width: 100%;
-    height: 500px;
+    height: 450px;
     background-color: #F2F2F2;
     display: flex;
     flex-direction: column;
@@ -433,12 +440,14 @@ footer ul{
     margin: 0;
 }
 footer li{
+    font-weight: 500;
+    font-size: 1em;
+    margin-bottom: 15px;
     width: 100%;
 }
 footer a{
     color: black;
     text-decoration: none;
-    font-size: 0.8em;
 }
 footer li:hover{
     text-decoration: underline;
