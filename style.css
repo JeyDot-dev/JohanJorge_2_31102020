@@ -5,18 +5,17 @@ html {
 body{
     font-family: "Raleway", sans-serif;
     max-width: 767px;
-    overflow-x: hidden;
 }
 p{
-    font-size: 1.3em;
+    font-size: 1.0em;
 }
 h1{
     font-weight: 700;
-    font-size: 1.6em;
+    font-size: 1.5em;
 }
 h2{
     font-weight: 700;
-    font-size: 1.3em;
+    font-size: 1.1em;
 }
 h3{
 
@@ -43,7 +42,7 @@ header{
     flex-direction: row;
 }
 header nav a{
-    font-size: 1.1em;
+    font-size: 20px;
     text-decoration: none;
     color: #0065FC;
 }
@@ -55,9 +54,14 @@ header nav a{
 /* >>S'inscrire */
 #sInscrire{
     position: absolute;
+    font-size: 20px;
+    font-weight: 100;
     right: 5%;
     top: -60px;
     text-align: right;
+}
+#sInscrire strong{
+    font-weight: 700;
 }
 /* >Header Nav */
 header nav{
@@ -274,7 +278,6 @@ article[id="article1"]{
 #hebergements{
     order: 2;
     width: 100%;
-    margin: 0 auto 40px auto;
     height: auto;
 }
 #hebergements h1{
@@ -455,3 +458,146 @@ footer a{
 footer li:hover{
     text-decoration: underline;
 }
+@media only screen and (min-width: 768px) {
+    body {
+        max-width: 991px;
+    }
+  }
+  @media only screen and (min-width: 992px){
+    body{
+      margin: 0 auto;
+      max-width: 1440px;
+    }
+    header{
+
+    }
+    #logo{
+        width: 10%;
+        margin-left: 10px;
+    }
+
+    #sInscrire{
+    width: auto;
+    position: initial;
+    order: 4;
+    margin: auto;
+    }
+    header nav{
+        position: initial;
+        margin: 0 0px;
+        margin-left: auto;
+        padding: initial;
+        height: auto;
+        width: 30%;
+    }
+    header nav ul{
+        margin: initial;
+        width: auto;
+    }
+    header nav li{
+        border-bottom: none;
+        width: auto;
+        height: initial;
+        margin: 0 20px;
+        padding: 11px 0 0 0;
+        border-top: 2px blue solid;
+
+    }
+      article[id=article1]{
+          flex-direction: row;
+      }
+      #populaires{
+          width: 40%;
+          padding: 0 40px;
+          order: 2;
+          margin-left: 40px;
+      }
+      #populaires div{
+        width: calc(100% - 6px);
+        height: 150px;
+        margin: 40px 0;
+    }
+    #populaires div h2, #populaires div p{
+        margin-left: 185px;
+        width: 200px;
+    }
+    #populaires div img{
+        width: 40%;
+    }
+    section[id="hebergements"]{
+          max-width: calc(60% - 40px);
+          display: flex;
+          flex-wrap: wrap;
+          padding: 0 40px;
+      }
+    section[id="hebergements"] h1{
+        width: 100%;
+      }
+    section[id="hebergements"] div{
+        margin: 20px;
+        width: 27.02328%;
+        padding: 6px;
+        height: 200px;
+        background-color: white;
+        border-radius: 30px;
+        box-shadow: silver 2px 2px 10px;
+    }
+    section[id="hebergements"] div img{
+        height: 55%;
+    }
+    #plus{
+        width: 100%;
+    }
+    #activites{
+        background-color: rosybrown;
+        position: relative;
+        width: 100%;
+        height: 575px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    #activites h1{
+        position: absolute;
+    }
+    #activites h2{
+        margin: 0 auto;
+        height: 45px;
+        background-color: royalblue;
+    }
+    #activites div{
+        width: 23.125%;
+        margin: 0;
+    }
+    div[class="cellLong"]{
+        min-height: 100%;
+    }
+    div[id="cell1"]{
+        min-height: 50%;
+    }
+    div[id="cell2"]{
+        min-height: 35%;
+    }
+    div[id="cell3"]{
+        min-height: 40%;
+    }
+    div[id="cell4"]{
+        min-height: 45%;
+    }
+    div[class="cellLong"] img{
+        height: auto;
+    }
+    div[id="cell1"] img{
+        height: 7.7em;
+    
+    }
+    div[id="cell2"] img{
+        height: 4.6em;  
+    }
+    div[id="cell3"] img{
+        height: 5.6em;
+    }
+    div[id="cell4"] img{
+        height: 6.7em;
+    }
+  }
