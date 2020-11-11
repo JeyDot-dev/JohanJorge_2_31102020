@@ -462,8 +462,14 @@ footer li:hover{
     body {
         max-width: 991px;
     }
+    #article1{
+        flex-direction: column;
+    }
+    #article1 section{
+        width: 100%;
+    }
   }
-  @media only screen and (min-width: 992px){
+@media only screen and (min-width: 992px){
     body{
       margin: 0 auto;
       max-width: 1440px;
@@ -529,10 +535,10 @@ footer li:hover{
           display: flex;
           flex-wrap: wrap;
           padding: 0 40px;
-      }
+    }
     section[id="hebergements"] h1{
         width: 100%;
-      }
+    }
     section[id="hebergements"] div{
         margin: 20px;
         width: 27.02328%;
@@ -600,4 +606,4 @@ footer li:hover{
     div[id="cell4"] img{
         height: 6.7em;
     }
-  }
+}
